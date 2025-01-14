@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Bolu's Portfolio
+        </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <style>
+            #gallery {
+  padding: 50px;
+  text-align: center;
+  background-color: #000;
+  color: azure;
+  width: 100%;
+}
+
+#gallery h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+        </style>
+        <div id="base">
+        <section class="body">
+            <div class="main-section">
+                <div class="text-section">
+                  <h1 class="name">BOLUWATIFE OBASA</h1>
+                  <p class="intro">Web Developer | Designer | Problem Solver</p>
+                  <button onclick="location.href='#about'" id="action">Take A Look</button>
+                </div>
+                <div class="image-section">
+                  <img src="https://i.ibb.co/Jy1p909/IMG-0381.jpg" alt="Boluwatife obasa" />
+                </div>
+              </div>
+        </section>
+        <div id="about">
+             <h1 style="text-align: center;">About Me</h1>
+             <section class="details">
+             <div id="more-detail">
+                <h2>Education</h2>
+                <ul>
+                   <li>Babcock University, Ilishan-Remo. - Bachelor Of Computer Science<br><strong>October 2022-Present</strong></li>
+                </ul>
+                <br>
+
+                <strong>Key Courses</strong>
+                <ul style="padding: 0px;">
+                    <li>Web Development(HTML, CSS, basic Javascript)</li>
+                    <li>DBMS</li>
+                    <li>Introduction to Programming</li>
+                </ul>
+             </div>
+<img src="https://www.schooldrillers.com/wp-content/uploads/2022/04/Contact-Babcock-University.png" class="flex-image" alt="babcockuniversity"/>
+             </section>
+             <section class="details">
+                <div id="more-detail">
+                    <h2>Projects</h2>
+                <p><strong>Exploring Development Projects From Scratch</strong></p>
+                <ul>
+                    <li>Currently exploring and building development projects form scratch as I deepen my skills in web development and programming. Excited to showcase real-world projects in the near future.</li>
+                </ul>
+                </div>
+                <a href="https://www.codecademy.com/profiles/BoluwatifeObasa/certificates/5cadfefe5f1de806e9704577" target="_blank"><img src="https://i.ibb.co/QjKc25q/cert.png" alt="" class="flex-image"></a>
+             </section>  
+             <section id="gallery">
+                <h1>Memorable Moments</h1>
+                <p>Here are some fun and memorable moments with friends and during my journey!</p>
+                <div class="gallery-grid">
+                  <img src="https://i.ibb.co/KwdTCk0/IMG-0379.jpg" alt="me">
+                  <img src="https://i.ibb.co/PwW9hsb/IMG-0380.jpg" alt="me">
+                  <img src="https://i.ibb.co/x1QH8GT/Snapinsta-app-420522622-1334843117171088-7131366758422175838-n-1080.jpg" alt="Photo with friends">
+                  <img src="https://i.ibb.co/F8VM4XR/Snapinsta-app-420147968-286536394435482-1276103080000178275-n-1080.jpg" alt="Photo with friends">
+                </div>
+              </section>  
+              <div class="contact-container">
+                <h1 style="text-align: center;">Contact Me</h1>
+                <div class="contact-form">
+                        <label>Name</label>
+                        <input type="text" placeholder="Enter your name" id="name">
+                        <label for="">Email</label>
+                        <input type="email" name="" id="email" placeholder="Your Email">
+                        <label for="phone">Phone</label>
+                        <input type="number" name="" id="phone" placeholder="Your number here">
+
+                        <label for="text">Message</label>
+                        <textarea name="text" id="text-box" placeholder="Drop Your message here"></textarea>
+                        <button type="submit" id="submit" onclick="clicked()">Send</button>
+                </div>
+            </div> 
+            <footer>
+                &COPY;2024 BOLUWATIFE OBASA
+            </footer>
+        </div>       
+        </div>
+     <script>
+        let inputs = document.getElementsByTagName('input');
+        var button = document.getElementById("submit");
+        function clicked(){
+            for(let input of inputs){
+            input.value = '';
+            }
+
+            alert("Your message has been sent");
+            button.innerText = "Message Received";
+            
+        }
+     </script>
+    </body>
+</html>
